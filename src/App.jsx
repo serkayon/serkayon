@@ -848,15 +848,29 @@ const handleSubmit = async (e) => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
-                      <Input placeholder="First Name" name="first_name" />
-                      <Input placeholder="Last Name" name="last_name" />
+                      <Input
+                        placeholder="First Name"
+                        name="first_name"
+                        required
+                      />
+                      <Input
+                        placeholder="Last Name"
+                        name="last_name"
+                        required
+                      />
                     </div>
-                    <Input placeholder="Email" type="email" name="email" />
-                    <Input placeholder="Subject" name="subject" />
+                    <Input
+                      placeholder="Email"
+                      type="email"
+                      name="email"
+                      required
+                    />
+                    <Input placeholder="Subject" name="subject" required />
                     <Textarea
                       placeholder="Your message"
                       rows={4}
                       name="message"
+                      required
                     />
                     <Button className="w-full" type="submit">
                       Send Message
