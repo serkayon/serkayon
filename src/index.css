@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+/* iMac Silver Finish */
+.imac-metal {
+  background: linear-gradient(
+    180deg,
+    #f5f5f5 0%,
+    #e6e6e6 30%,
+    #d9d9d9 55%,
+    #efefef 100%
+  );
+}
+
+.imac-stand-shadow {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+.icon-svg {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.action-btn:hover .icon-svg {
+  filter: brightness(0) invert(1) sepia(1) saturate(5000%) hue-rotate(160deg);
+}
+
+/* Mobile & Tablet (up to 1024px) */
+@media (max-width: 1024px) {
+ .feature-card{
+  
+   width: 100%;
+ 
+ }
+}
+/* ===============================
+   BASE (mobile already handled by Tailwind)
+================================ */
+
+/* ===============================
+   LARGE SCREENS (≥ 1400px)
+================================ */
+@media (min-width: 2000px) {
+
+  /* HERO WRAPPER */
+  .home-page {
+    padding-left: 8rem;   /* more breathing space */
+    padding-right: 8rem;
+    gap: 18rem;           /* vertical spacing */
+  }
+
+  /* LOGO TEXT */
+  .logo {
+    font-size: 1.25rem;   /* 20px */
+    letter-spacing: 0.2em;
+  }
+
+  /* TAG (REALTIME DATA) */
+  .tag {
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+
+
+  /* MAIN SLOGAN */
+  .slogan {
+    font-size: 6rem;      /* BIG impact */
+    line-height: 1.05;
+    max-width: 70rem;     /* avoid super long lines */
+  }
+}
+
+/* ===============================
+   EXTRA LARGE / ULTRA-WIDE (≥ 1800px)
+================================ */
+@media (min-width: 1800px) {
+
+  .home-page {
+    gap: 30rem !important;
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+
+
+  .home-page .inline-flex {
+    font-size: 1rem;
+  }
+.slogan-container{
+  max-width: 80rem;
+}
+  .slogan {
+    font-size: 7.5rem !important;   /* cinematic */
+    max-width: 80rem ;
+  }
+/* REALTIME DATA pill */
+  .real-tag {
+    padding: 1rem 2rem !important;   /* increase pill size */
+    font-size: 1.8rem !important;        /* text slightly bigger */
+    letter-spacing: 0.15em !important;
+  }
+
+  
+
+}
+
+@media  (min-width:300px){
+  .slogan{
+    font-size:2.5rem;
+
+  }
+ 
+}
+
+/* Disable up/down offset on small screens */
+@media (max-width: 699px) {
+  .feature-card {
+    transform: translateY(0) !important;
+  }
+}
+
+@media (max-width: 1000px) {
+.feedback-text{
+  margin-top: 90px;
+}
+
+}
+.contact-box {
+  margin-top: 16px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 13px;
+  color: #ddd;
+  text-align: center;
+}
+
+/* glowing contact text */
+.contact-glow {
+  color: #00eaff;
+  font-weight: 600;
+  margin-left: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-shadow: 0 0 6px rgba(0,234,255,0.8),
+               0 0 12px rgba(0,234,255,0.6);
+}
+
+/* stronger glow on hover */
+.contact-glow:hover {
+  text-shadow: 0 0 10px rgba(0,234,255,1),
+               0 0 20px rgba(0,234,255,0.9),
+               0 0 30px rgba(0,234,255,0.7);
+}

@@ -1,0 +1,421 @@
+/* ---------- BASE ---------- */
+html, body {
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #eaeaea;
+}
+
+/* ---------- BACKGROUND GLOW ---------- */
+.pricing-wrapper {
+  min-height: 100vh;
+  padding: 90px 20px;
+  text-align: center;
+  /* background:
+    radial-gradient(
+      circle at center,
+      rgba(34, 211, 238, 0.18),
+      rgba(34, 211, 238, 0.05),
+      transparent 60%
+    ),
+    #000; */
+}
+/* ---------- HEADER ---------- */
+.pricing-title {
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: 2px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.pricing-subtitle {
+  color: #9ca3af;
+    font-size: clamp(14px, 1.2vw, 18px);
+
+  margin-bottom: 70px;
+}
+
+/* ---------- CARDS ---------- */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+  flex-wrap: wrap;
+  margin-bottom: 5%;
+}
+
+.pricing-card {
+  position: relative;
+  width: 320px;
+  padding: 34px 30px 96px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: left;
+}
+
+/* Center card */
+.pricing-card.premium {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-10px);
+}
+
+/* ---------- OFFER / BADGE ---------- */
+.badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.offer {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(168, 85, 247, 0.25);
+  color: #e9d5ff;
+}
+
+/* ---------- TEXT ---------- */
+.pricing-card h3 {
+    font-size: clamp(18px, 1.6vw, 22px);
+
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: clamp(28px, 3vw, 38px);
+
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.price span {
+  font-size: clamp(12px, 1vw, 14px);
+  color: #9ca3af;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-card ul li {
+ font-size: clamp(13px, 1.1vw, 15px);
+  margin: 10px 0;
+  color: #d1d5db;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  position: absolute;
+  bottom: 26px;
+  left: 26px;
+  right: 26px;
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+font-size: clamp(13px, 1.1vw, 15px);
+  cursor: pointer;
+}
+
+/* ---------- YEARLY BUTTON SHIMMER ---------- */
+.yearly-btn {
+  overflow: hidden;
+}
+
+.yearly-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 3.5s infinite;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes shimmer {
+  100% {
+    left: 120%;
+  }
+}
+/* ---------- SUPER SALE RIBBON ---------- */
+.super-sale {
+  position: absolute;
+  top: 18px;
+  right: -8px;
+  background: linear-gradient(90deg, #ff1a1a, #cc0000);
+  color: #fff;
+  padding: 10px 22px 10px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px 0 0 4px;
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.4);
+}
+
+/* Right cut (flag shape) */
+.super-sale::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -14px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 14px solid #cc0000;
+}
+
+/* Dotted stitching (optional like image) */
+.super-sale::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px dashed rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+/* ---------- AQUA BOW WITH V-CUT ENDS ---------- */
+.aqua-bow {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #22d3ee, #06b6d4, #22d3ee);
+  color: #003344;
+  font-weight: 700;
+  padding: 12px 52px;
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  box-shadow: 0 10px 28px rgba(34, 211, 238, 0.6);
+  overflow: hidden;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 70%,
+    94% 50%,
+    100% 100%,
+    0% 100%,
+    6% 50%,
+    0% 90%
+  );
+}
+
+/* SHIMMER */
+.aqua-bow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+  animation: bowShimmer 3s infinite;
+}
+
+/* SHIMMER ANIMATION */
+@keyframes bowShimmer {
+  100% {
+    left: 120%;
+  }
+}
+/* ---------- CURVED AQUA RIBBON (LIKE IMAGE) ---------- */
+.curved-ribbon {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 46px;
+  background: linear-gradient(
+    90deg,
+    #22d3ee,
+    #06b6d4,
+    #22d3ee
+  );
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 10px 28px rgba(34, 211, 238, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+}
+
+/* TEXT */
+.curved-ribbon span {
+  color: #003344;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+/* LEFT V-CUT TAIL */
+.curved-ribbon::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-top: 23px solid #06b6d4;
+  border-bottom: 23px solid transparent;
+  border-right: 26px solid #06b6d4;
+}
+
+/* RIGHT V-CUT TAIL */
+.curved-ribbon::after {
+  content: "";
+  position: absolute;
+  right: -26px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-top: 23px solid #06b6d4;
+  border-bottom: 23px solid transparent;
+  border-left: 26px solid #06b6d4;
+}
+
+/* ---------- SHIMMER ---------- */
+.curved-ribbon span::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -120%;
+  width: 60%;
+  height: 160%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+  animation: ribbonShimmer 3s infinite;
+}
+
+@keyframes ribbonShimmer {
+  100% {
+    left: 120%;
+  }
+}
+
+/* ================= YEARLY BADGE + RIBBON ================= */
+
+/* Ribbon behind circle */
+.yearly-ribbon {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 40px;
+  background: linear-gradient(
+    90deg,
+    #22d3ee,
+    #06b6d4,
+    #22d3ee
+  );
+  z-index: 1;
+
+  /* REAL V-CUT SHAPE */
+  clip-path: polygon(
+    0% 0%,
+    95% 0%,
+    90% 50%,
+    95% 100%,
+    0% 100%,
+    5% 50%
+  );
+  
+}
+
+/* V cut left */
+
+/* Shimmer */
+
+
+  /* Circle badge */
+  .yearly-badge {
+    position: absolute;
+    top: -46px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #22d3ee, #06b6d4);
+    border: 3px dashed #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+    box-shadow: 0 12px 30px rgba(34, 211, 238, 0.7);
+    overflow: hidden;
+    
+  }
+
+  /* Badge text */
+  .yearly-badge span {
+    font-size: 13px;
+    font-weight: 900;
+    color: #003344;
+    line-height: 1.1;
+  }
+
+  /* Badge shimmer */
+  .yearly-badge::after {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -120%;
+    width: 60%;
+    height: 140%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.9),
+      transparent
+    );
+    animation: badgeShimmer 3s infinite;
+  }
+
+  @keyframes badgeShimmer {
+    100% {
+      left: 120%;
+    }
+  }
