@@ -8,6 +8,9 @@ import Careers from "./pages/Careers";
 import CaseStudyCategories from "./pages/CaseStudy/CaseStudyCategories";
 import CategoryPage from "./pages/CaseStudy/CategoryPage";
 import CaseStudyDetail from "./pages/CaseStudy/CaseStudyDetail";
+import { Navigate } from "react-router-dom";
+
+
 function App() {
   return (
     <Router>
@@ -26,6 +29,8 @@ function App() {
           path="/case-study/:slug/:productSlug"
           element={<CaseStudyDetail />}
         />
+
+<Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );

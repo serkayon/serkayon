@@ -263,14 +263,7 @@ const ProductDetail = () => {
           animate={{ opacity: 1 }}
           onClick={() => setZoomImage(null)}
         >
-          <motion.div
-            className="w-full max-w-6xl"
-            initial={{ scale: 0.9 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.4 }}
-            onClick={(e) => e.stopPropagation()} // prevent close
-          >
-            <button
+               <button
               onClick={() => setZoomImage(null)}
               className="
                 absolute top-6 right-8
@@ -287,6 +280,14 @@ const ProductDetail = () => {
             >
               <X size={22} />
             </button>
+          <motion.div
+            className="w-full max-w-6xl"
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.4 }}
+            onClick={(e) => e.stopPropagation()} // prevent close
+          >
+       
             <DashboardAnnotator
               imageSrc={zoomImage}
               detailedImage={zoomImage}

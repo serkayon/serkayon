@@ -21,20 +21,11 @@ export default function CategoryPage() {
           content: `
 Real-time machine monitoring dashboard for shaft diameter inspection with AI-powered quality control enables real-time monitoring, delivering a 30% increase in OEE and a 25% reduction in defects.
           `,
-        },
-        {
-          title: "Bio Predictive Maintenance:Real-time bioreactor failure prediction  and improve reliability",
-          slug: "bio-product",
-          heroImage: bioPm,
-          content: `
-AI-driven bioreactor predictive maintenance platform analyzing PLC data via Modbus to detect performance issues and risks.
-Monitors agitation, temperature, and pH/DO to improve reliability and reduce downtime.
-          `,
-        },
+        }
       ],
     },
     {
-      category: "Column Integrity Guard",
+      category: "BIO",
       slug: "column-integrity",
       products: [
         {
@@ -44,6 +35,15 @@ Monitors agitation, temperature, and pH/DO to improve reliability and reduce dow
           content: `
 Monitors hydrodynamic stability, pressure, and flow in packed-bed bioreactors to detect channeling, compaction, and degradation. Enables predictive maintenance and continuous auditing for consistent performance and reduced failure risk.
 
+          `,
+        },
+        {
+          title: "Bio Predictive Maintenance:Real-time bioreactor failure prediction  and improve reliability",
+          slug: "bio-product",
+          heroImage: bioPm,
+          content: `
+AI-driven bioreactor predictive maintenance platform analyzing PLC data via Modbus to detect performance issues and risks.
+Monitors agitation, temperature, and pH/DO to improve reliability and reduce downtime.
           `,
         },
       ],
@@ -123,7 +123,7 @@ Factory solution with IoT integration, AI-driven optimization, full system integ
             >
 
               {/* Image */}
-              <div className="h-50 overflow-hidden">
+              <div className="h-56 overflow-hidden">
                 <img
                   src={product.heroImage}
                   alt={product.title}

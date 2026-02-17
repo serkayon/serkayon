@@ -53,6 +53,44 @@ The solution enhanced manufacturing efficiency, product quality, and operational
         conclusion: `
 The real-time machine monitoring dashboard significantly improves shaft inspection accuracy and production efficiency. AI-powered quality control enables smarter manufacturing and ensures consistent product quality.        `,
       },
+    ],
+  },
+
+  {
+    category: "Column Integrity Guard:Proactive column stability monitoring",
+    slug: "column-integrity",
+    products: [
+      {
+        title: "Column Integrity Guard:Proactive column stability monitoring",
+        slug: "column-guard",
+        heroImage: columnImg,
+       solutionImage: columnSolution,
+resultImage: columnResult,
+
+
+        intro: `
+Packed-bed bioreactors are widely used in enzyme-based industrial processes where column stability and process consistency are critical for optimal performance. However, column degradation and flow irregularities can significantly impact product yield and operational efficiency. To address these challenges, a Column Integrity Guard system was developed to monitor packed-bed stability and process behavior. The system analyzes hydrodynamic stability, pressure variation, and flow characteristics in real time. By enabling proactive maintenance and early detection of performance issues, the solution ensures reliable and consistent process performance
+        `,
+
+        challenge: `
+Enzyme-based packed-bed bioreactors are prone to operational issues such as channeling, bed compaction, and performance degradation. Traditional monitoring methods often fail to detect early signs of column instability, leading to inconsistent process performance and reduced yield. Variations in pressure and flow behavior can increase the risk of unexpected column failure and operational downtime. Additionally, maintaining process consistency and protecting system performance requires continuous monitoring and predictive maintenance capabilities. These challenges highlighted the need for an intelligent solution for real-time column integrity monitoring and machine auditing.
+        `,
+
+        solution: `
+To address these challenges, a Column Integrity Guard system was developed for continuous monitoring of packed-bed bioreactor performance. The system analyzes hydrodynamic stability, pressure variations, and flow behavior in real time. It integrates PLC data to detect early signs of channeling, bed compaction, and column degradation. AI-driven analytics enable predictive maintenance and proactive identification of performance risks. The platform provides continuous machine auditing and process monitoring through real-time insights. This solution ensures process consistency, protects yield, and reduces the risk of unexpected column failure.
+        `,
+
+        results: `
+The system enabled early detection of column degradation and flow irregularities.
+Process consistency and operational stability were significantly improved.
+Predictive maintenance reduced the risk of unexpected column failures and downtime.
+Continuous monitoring enhanced yield protection and overall system reliability
+        `,
+
+        conclusion: `
+The Column Integrity Guard enhances packed-bed bioreactor stability through real-time monitoring and predictive maintenance. It ensures consistent process performance, improved reliability, and reduced operational risk.        `,
+      },
+      
 
       {
         title: "Bio Predictive Maintenance:Predicts bioreactor failures and audits machine performance",
@@ -82,44 +120,7 @@ The platform ensured audit-ready operational transparency with continuous perfor
 
         conclusion: `
 The AI-driven predictive maintenance platform enhances bioreactor reliability through real-time monitoring and intelligent failure prediction. It ensures efficient operations, reduced downtime, and improved batch performance.        `,
-      },
-    ],
-  },
-
-  {
-    category: "Column Integrity Guard:Proactive column stability monitoring",
-    slug: "column-integrity",
-    products: [
-      {
-        title: "Column Integrity Guard",
-        slug: "column-guard",
-        heroImage: columnImg,
-       solutionImage: columnSolution,
-resultImage: columnResult,
-
-
-        intro: `
-Packed-bed bioreactors are widely used in enzyme-based industrial processes where column stability and process consistency are critical for optimal performance. However, column degradation and flow irregularities can significantly impact product yield and operational efficiency. To address these challenges, a Column Integrity Guard system was developed to monitor packed-bed stability and process behavior. The system analyzes hydrodynamic stability, pressure variation, and flow characteristics in real time. By enabling proactive maintenance and early detection of performance issues, the solution ensures reliable and consistent process performance
-        `,
-
-        challenge: `
-Enzyme-based packed-bed bioreactors are prone to operational issues such as channeling, bed compaction, and performance degradation. Traditional monitoring methods often fail to detect early signs of column instability, leading to inconsistent process performance and reduced yield. Variations in pressure and flow behavior can increase the risk of unexpected column failure and operational downtime. Additionally, maintaining process consistency and protecting system performance requires continuous monitoring and predictive maintenance capabilities. These challenges highlighted the need for an intelligent solution for real-time column integrity monitoring and machine auditing.
-        `,
-
-        solution: `
-To address these challenges, a Column Integrity Guard system was developed for continuous monitoring of packed-bed bioreactor performance. The system analyzes hydrodynamic stability, pressure variations, and flow behavior in real time. It integrates PLC data to detect early signs of channeling, bed compaction, and column degradation. AI-driven analytics enable predictive maintenance and proactive identification of performance risks. The platform provides continuous machine auditing and process monitoring through real-time insights. This solution ensures process consistency, protects yield, and reduces the risk of unexpected column failure.
-        `,
-
-        results: `
-The system enabled early detection of column degradation and flow irregularities.
-Process consistency and operational stability were significantly improved.
-Predictive maintenance reduced the risk of unexpected column failures and downtime.
-Continuous monitoring enhanced yield protection and overall system reliability
-        `,
-
-        conclusion: `
-The Column Integrity Guard enhances packed-bed bioreactor stability through real-time monitoring and predictive maintenance. It ensures consistent process performance, improved reliability, and reduced operational risk.        `,
-      },
+      }
     ],
   },
 

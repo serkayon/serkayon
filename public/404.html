@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page Not Found | Serkayon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      color: #222;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 500px;
+      width: 100%;
+    }
+
+    /* ✅ Larger image */
+    img {
+      width: 260px;
+      max-width: 80%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 72px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 26px;
+      background: black;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    a:hover {
+      background: #333;
+    }
+
+    /* ✅ Mobile adjustments */
+    @media (max-width: 600px) {
+      img {
+        width: 180px;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      a {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="404.png" alt="Serkayon Logo" />
+
+    <h1>ERROR 404</h1>
+    <p>Oops! The page you are looking for does not exist.</p>
+
+    <a href="/">Return to Home</a>
+  </div>
+
+</body>
+</html>
