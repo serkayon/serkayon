@@ -3,10 +3,19 @@ import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./NavBar";
+import { Helmet } from 'react-helmet-async';
 export default function Subscription() {
   const navigate = useNavigate();
   return (
     <>
+     <Helmet>
+  <title>Pricing - View flexible pricing options for Serkayon’s Product</title>
+<meta
+  name="description"
+  content="Explore Affordable Pricing options for Serkayon Products "/>
+
+    
+          </Helmet>
       <Navbar />
       <div className="pricing-wrapper">
         <h1 className="pricing-title">Pricing and Planning</h1>

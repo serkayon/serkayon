@@ -3,10 +3,21 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import  Navbar from "./NavBar"
+import { Helmet } from 'react-helmet-async';
 const Careers = () => {
   const navigate = useNavigate();
 
   return (
+    <>
+    <Helmet>
+<title>Careers at Serkayon Industrial Intelligence</title>
+         <meta
+  name="description"
+  content="Explore career opportunities at Serkayon. Join our Team"
+/>
+
+      </Helmet>
+
     <div className="min-h-screen bg-[#060606] flex items-center justify-center relative overflow-hidden">
       <Navbar/>
   
@@ -31,6 +42,7 @@ const Careers = () => {
 
       </motion.h1>
     </div>
+    </>
   );
 };
 

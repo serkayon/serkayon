@@ -9,6 +9,9 @@ import CaseStudyCategories from "./pages/CaseStudy/CaseStudyCategories";
 import CategoryPage from "./pages/CaseStudy/CategoryPage";
 import CaseStudyDetail from "./pages/CaseStudy/CaseStudyDetail";
 import { Navigate } from "react-router-dom";
+import NotFound from "./pages/NotFoundPage";
+
+
 
 
 function App() {
@@ -30,8 +33,8 @@ function App() {
           element={<CaseStudyDetail />}
         />
 
-<Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+<Route path="*" element={<NotFound />} />      
+</Routes>
     </Router>
   );
 }

@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import  Navbar from "./NavBar"
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-
+import { Helmet } from 'react-helmet-async';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -53,7 +53,19 @@ const handleSubmit = async (e) => {
 
 
   return (
-    <div className="min-h-screen bg-industrial-dark">
+
+    <>
+    <Helmet>
+<title>Contact Serkayon | Get in Touch with Our Experts</title>
+<meta
+  name="description"
+
+  content="Contact Serkayon- Our experts are ready to support"
+/>
+
+
+      </Helmet>
+     <div className="min-h-screen bg-industrial-dark">
       <Navbar/>
          {/* <motion.button
         initial={{ opacity: 0, scale: 0.9 }}
@@ -194,7 +206,10 @@ const handleSubmit = async (e) => {
 
       <Footer />
     </div>
+  
+    </>
   )
+   
 }
 
 export default Contact

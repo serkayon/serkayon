@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import NavBar from "../NavBar";
-import Bio from "./CaseStudyAssests/bacteria.jpg";
+import Bio from "./CaseStudyAssests/bio-reactor-site.png";
 import Machine from "./CaseStudyAssests/machinetools.jpg";
 import Sustainable from "./CaseStudyAssests/sustainable.png";
-
+import { Helmet } from 'react-helmet-async';
 export default function CaseStudyCategories() {
   const navigate = useNavigate();
 
@@ -26,7 +26,17 @@ export default function CaseStudyCategories() {
   ];
 
   return (
-    <div className="bg-industrial-darker min-h-screen">
+    <>
+ <Helmet>
+<title>Case Studies | Real Industrial Solutions by Serkayon</title>
+   <meta
+  name="description"
+  content="Discover how Serkayon delivers real-world industrial safety and AI monitoring solutions through successful implementations and measurable results."
+/>
+
+
+      </Helmet>
+      <div className="bg-industrial-darker min-h-screen">
       
       <NavBar />
 
@@ -79,5 +89,7 @@ export default function CaseStudyCategories() {
         </div>
       </section>
     </div>
+    </>
+  
   );
 }

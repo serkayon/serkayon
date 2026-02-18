@@ -9,7 +9,7 @@ import predictiveImg from '../pages/assets/bio.png'
 import cii from '../pages/assets/cii.png'
 import BackgroundVideo from '../pages/assets/sampleVideo.mp4'
 import CornerNav from '../CornerNav'
-
+import { Helmet } from 'react-helmet-async';
 
 
 /* ================= LINE + CARD ANIMATIONS ================= */
@@ -46,6 +46,13 @@ const Home = () => {
   const divisionsRef = useRef(null)
 
   return (
+<>
+       <Helmet>
+    <title>Serkayon - Industrial Intelligence</title>
+    <meta
+      name="description"
+      content="Serkayon Industrial Intelligence provides data analysis and operational auditing software for industrial and bioprocess plants, using PLC and sensor data to monitor processes and deliver early warnings before performance issues arise." />
+          </Helmet>
     <div className="min-h-screen bg-industrial-dark">
 
       {/* ================= HERO ================= */}
@@ -266,6 +273,7 @@ monitoring dashboards"
 
       <Footer />
     </div>
+    </>
   )
 }
 

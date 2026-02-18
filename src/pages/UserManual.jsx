@@ -5,7 +5,7 @@ const products = [
   {
     name: "Bio-PM",
     description: "Predictive Maintenance System for AI-driven machine health monitoring.",
-    pdf: null
+    pdf: "/Bio-PM_User_Manual.pdf"
   },
   {
     name: "Bio-CIG",
@@ -21,14 +21,18 @@ const products = [
 
 const UserManual = () => {
 
-  const handleDownload = (pdfPath) => {
-    const link = document.createElement("a");
-    link.href = pdfPath;
-    link.download = pdfPath.split("/").pop();
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+ const handleDownload = (pdfPath) => {
+  const link = document.createElement("a");
+  link.href = pdfPath;
+
+
+  link.download = "Bio-Pm_User-Manual.pdf";
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 
   return (
     <div className="min-h-screen bg-industrial-dark text-[#d8f9ff] px-4 sm:px-6 py-16 sm:py-20">

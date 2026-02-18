@@ -13,6 +13,7 @@ import Features from "../pages/Features";
 import { X } from "lucide-react";
 import TopImage from "./assets/bg-bio.png";
 import UserManual from "./UserManual.jsx";
+import { Helmet } from 'react-helmet-async';
 import {
   Brain,
   Activity,
@@ -52,10 +53,30 @@ const productDownload = {
     downloadLink: null, // not ready
   },
 };
+const productSeoData = {
+  "predictive-maintenance": {
+    title: "Bio-Predictive Maintenance - Serkayon Product",
+    subtitle:
+      "Predicts bioreactor failures and audits machine performance in real time to reduce downtime and improve batch reliability",
+    seoImage: "https://serkayon.com/Bio-PM.jpg"
+  },
+
+  "machine-monitoring": {
+    title: "Machine Tool-Guard - Serkayon Product",
+    subtitle: "Monitors tool diameter accuracy and machine health to predict wear, prevent defects, and maintain production quality"
+  },
+
+  "column-integrity-guard": {
+    title: "Bio-Column Integrity Guard - Serkayon Product",
+    subtitle: "Detects column degradation and ensures packed-bed stability to enable proactive maintenance and consistent process performance"
+  }
+};
+
+
 
 const productData = {
   "machine-monitoring": {
-    title: "Machine Tool-Guard",
+    title: "Machine Tool-Guard ",
     subtitle:
       "Monitors tool diameter accuracy and machine health to predict wear, prevent defects, and maintain production quality",
     images: [machineTool],
@@ -224,7 +245,7 @@ const ProductDetail = () => {
     manualRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   //default product details of machine-monitoring wil come
-
+const seo = productSeoData[productId] || {};
   const product = productData[productId] || productData["machine-monitoring"];
   const currentFeatures = featureMapping[productId] || mtguardFeatures;
   const downloadInfo = productDownload[productId] || {};
@@ -252,6 +273,45 @@ const ProductDetail = () => {
     setActiveImage(0);
   }, [productId]);
   return (
+ <>
+
+ {/* SEO Section  */}
+  <Helmet>
+  <title>{seo.title || "Our Products - Serkayon Industrial Intelligence"}</title>
+  <meta
+  name="description"
+  content={seo.subtitle || "Explore Serkayon’s industrial solutions including Bio-Predictive Maintenance , Machine Tool-Guard, Bio-Column Integrity Guard"}
+/>
+
+ {/* Open Graph */}
+  <meta property="og:title" content={seo.title} />
+  <meta property="og:description" content={seo.subtitle} />
+
+  <meta
+    property="og:image"
+    content={
+      seo.seoImage ||
+      "https://serkayon.com/OG_LOGO.png"
+    }
+  />
+
+  <meta
+    property="og:url"
+    content={`https://serkayon.com/products/${productId}`}
+  />
+  <meta property="og:type" content="website" />
+
+  {/* Twitter */}
+    <meta name="twitter:title" content={seo.title} />
+    <meta name="twitter:description" content={seo.subtitle} />
+    <meta
+      name="twitter:image"
+      content={seo.seoImage || "https://serkayon.com/OG_LOGO.png"}
+    />
+
+      </Helmet>
+      {/* Main Code  */}
+  
     <div className="min-h-screen bg-industrial-dark overflow-hidden">
       <Navbar />
 
@@ -558,6 +618,7 @@ const ProductDetail = () => {
       </section>
       <Footer />
     </div>
+      </>
   );
 };
 

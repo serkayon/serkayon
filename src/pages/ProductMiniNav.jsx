@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom"
-
+import { Helmet } from 'react-helmet-async';
 const tabs = [
   { id: "machine-monitoring", label: "MTG" },
   { id: "predictive-maintenance", label: "Bio-PM" },
@@ -11,6 +11,18 @@ const ProductMiniNav = () => {
   const { productId } = useParams()
 
   return (
+
+    <>
+{/* 
+         <Helmet>
+<title>Our Products - Serkayon Industrial Intelligence</title>
+<meta
+  name="description"
+  content="Explore Serkayon’s industrial solutions including Bio-Predictive Maintenance , Machine Tool-Guard, Bio-Column Integrity Guard"
+/>
+
+      </Helmet>
+    */}
     <div
       className="
         inline-flex mb-6 rounded-xl p-1
@@ -50,6 +62,7 @@ const ProductMiniNav = () => {
         )
       })}
     </div>
+     </>
   )
 }
 

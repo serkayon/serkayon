@@ -123,7 +123,7 @@ Factory solution with IoT integration, AI-driven optimization, full system integ
             >
 
               {/* Image */}
-              <div className="h-56 overflow-hidden">
+              <div className="h-40 md:h-56 overflow-hidden">
                 <img
                   src={product.heroImage}
                   alt={product.title}
